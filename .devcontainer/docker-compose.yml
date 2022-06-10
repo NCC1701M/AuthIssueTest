@@ -1,0 +1,23 @@
+version: '3'
+services:
+  app:
+    container_name: AuthIssueTest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USER_ID: 1000
+        USER_GID: 1000
+    volumes:
+      - ..:/workspaces:cached
+    network_mode: service:db
+    command: sleep infinity
+
+  db:
+    container_name: AuthIssueTestDB
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: Y
+      COLLATION: Latin1_General_CI_AS
+      SA_PASSWORD: APr3ttyStr0ngP@ssword

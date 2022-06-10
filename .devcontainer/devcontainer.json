@@ -1,0 +1,32 @@
+{
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspaces",
+	"remoteEnv": {
+		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+	},
+	"extensions": [
+		"ms-azuretools.vscode-docker",
+		"eamodio.gitlens",
+		"quicktype.quicktype",
+		"dotjoshjohnson.xml",
+		"hookyqr.beautify",
+		"dbaeumer.vscode-eslint",
+		"ms-dotnettools.csharp",
+		"k--kato.docomment",
+		"gruntfuggly.todo-tree",
+		"mtxr.sqltools",
+		"mtxr.sqltools-driver-mssql",
+		"streetsidesoftware.code-spell-checker",
+		"streetsidesoftware.code-spell-checker-german",
+		"janisdd.vscode-edit-csv",
+		"heaths.vscode-guid",
+		"hediet.vscode-drawio"
+	],
+	"forwardPorts": [
+		5000,
+		5001,
+		4200
+	],
+	"name": "AuthIssueTest"
+}
